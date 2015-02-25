@@ -135,5 +135,13 @@ defineBlumTests() {
       
       expect(() => bbs.nextDouble(), throws, reason: "Implementation needs test");
     });
+    
+    test("regular nextInt", () {
+      var bbs = new BlumBlumShub();
+      
+      for (int i = 0; i < 100; i++) {
+        expect(bbs.nextInt(100) < 100, isTrue);
+      }
+    });
   });
 }
